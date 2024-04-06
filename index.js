@@ -112,6 +112,11 @@ app.post('/api/persons', (request, response, next) => {
     // id: generateId(),
   })
 
+  // error = person.validateSync()
+  // if(error){
+  //   return response.status(400).json({error: error.message})
+  // }
+
   person.save().then(savedPerson => {
     response.json(savedPerson)
   })
