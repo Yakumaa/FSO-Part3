@@ -22,11 +22,11 @@ const phonebookSchema = new mongoose.Schema({
 const Person = mongoose.model('Person', phonebookSchema)
 
 const person = new Person({
-  "name": "Barto Hellas", 
+  "name": "Barto Hellas",
   "number": "040-123456"
 })
 
-person.save().then(result => {
+person.save().then( () => {
   console.log('person saved!')
   // mongoose.connection.close()
 })
